@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrationform</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"> </script>
+</head>
+
+<body>
+    <div class="container">
+        <form id="form" onsubmit="validateInputs(); return false;">
+            <h2>Registration Form</h2>
+            <div class="input-control">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter full name" oninput="clearError(this)">
+            </div>
+            <br>
+            <br>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter email" oninput="clearError(this)">
+            </div>
+            <br>
+            <br>
+            <div class="input-control">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" oninput="clearError(this)">
+            </div>
+            <br>
+            <br>
+            <div class="input-control">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" required name="dob" oninput="clearError(this)">
+            </div>
+            <br>
+            <br>
+            <div class="input-control">
+                <label for="acceptTerms">Accept Terms & Conditions</label>
+                <input type="checkbox" style="margin:0;padding: 0;" id="acceptTerms" name="acceptTerms"
+                    onchange="clearError(this)">
+            </div>
+            <br>
+            <br>
+            <div style="text-align:left;">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <p id="demo"></p>
+    <table border="0" cellspacing="0" cellpadding="5" height="100" width="100"
+        style="margin-left: auto;margin-right: auto;">
+        <h1 style="text-align: center;">Entries </h1>
+        <div class="container">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Date of Birth</th>
+                    <th>Accept Terms</th>
+                </tr>
+            </thead>
+            <tbody id="formDataBody"></tbody>
+        </table>
+    </div>
+</body>
+
+</html>
